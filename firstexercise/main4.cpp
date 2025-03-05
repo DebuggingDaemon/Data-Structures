@@ -8,6 +8,8 @@
 using namespace std;
 using namespace std::chrono;
 
+/* Execution of Bis and IBS algoritms*/
+
 pair<size_t, size_t> BISgenerate(vector<District>& A, District& ke1, District& ke2);
 pair<size_t, size_t> IBSgenerate(vector<District>& A, District& ke1, District& ke2);
 
