@@ -62,7 +62,8 @@ pair<size_t, size_t> BISgenerate(vector<District>& A, District& ke1, District& k
 pair<size_t, size_t> IBSgenerate(vector<District>& A, District& ke1, District& ke2){
 	int x=interpolated_binSearch(A, 0, A.size()-1, ke1);
 	size_t low=(A[x]<ke1)? x+1:x;
-	low=(A[x-1].births>=ke1.births)? x-1:low;
+    int r=(x>0)? x-1:x;
+    low=(A[r].births>=ke1.births)? r:low;
 	size_t j=low;
 	while(j<A.size() && A[j].births<ke2.births){
 			j++;
